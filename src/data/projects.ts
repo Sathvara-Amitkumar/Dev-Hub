@@ -13,6 +13,13 @@ export type Project = {
   liveUrl: string;
   featured: boolean;
   metrics?: ProjectMetric[];
+  // Add a local image at /images/... with its alt text and intrinsic dimensions when available.
+  image?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
 };
 
 export const projects: Project[] = [
