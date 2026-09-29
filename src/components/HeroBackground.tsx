@@ -17,11 +17,11 @@ const particles = [
 export function HeroBackground() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-      <svg className="absolute inset-0 h-full w-full text-accent/15" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="72" y1="0" x2="38" y2="100" stroke="currentColor" strokeWidth="0.12" />
-        <line x1="84" y1="0" x2="52" y2="100" stroke="currentColor" strokeWidth="0.12" />
-        <line x1="96" y1="0" x2="68" y2="100" stroke="currentColor" strokeWidth="0.12" />
-        <line x1="100" y1="8" x2="78" y2="100" stroke="currentColor" strokeWidth="0.1" />
+      <svg className="absolute inset-0 h-full w-full text-accent/20" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="72" y1="0" x2="38" y2="100" stroke="currentColor" strokeWidth="0.16" />
+        <line x1="84" y1="0" x2="52" y2="100" stroke="currentColor" strokeWidth="0.16" />
+        <line x1="96" y1="0" x2="68" y2="100" stroke="currentColor" strokeWidth="0.16" />
+        <line x1="100" y1="8" x2="78" y2="100" stroke="currentColor" strokeWidth="0.13" />
       </svg>
       {particles.map((particle, index) => (
         <motion.span

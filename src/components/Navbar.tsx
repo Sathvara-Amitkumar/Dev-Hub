@@ -62,15 +62,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95">
       <nav
         aria-label="Primary"
-        className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3 md:px-10"
+        className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-8"
       >
         <a
           href="#hero"
-          className="text-sm font-medium tracking-[0.18em] text-foreground transition-colors hover:text-accent"
+          className="text-sm font-semibold tracking-[0.2em] text-foreground transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
           AK
         </a>
-        <ul className="hidden items-center gap-5 text-[13px] md:flex">
+        <ul className="hidden items-center gap-4 text-sm lg:gap-5 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
               <NavAnchor href={item.href} active={activeId === item.id}>
@@ -125,7 +125,8 @@ function NavAnchor({ href, active, children, className = "", onClick }: NavAncho
     <a
       href={href}
       onClick={onClick}
-      className={`transition-colors hover:text-accent ${
+      aria-current={active ? "location" : undefined}
+      className={`rounded-sm transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
         active ? "text-accent" : "text-muted"
       } ${className}`}
     >
